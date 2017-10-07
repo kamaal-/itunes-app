@@ -1,0 +1,49 @@
+.header
+  display: flex
+  flex-direction: column
+  min-height: 100px
+  &__main
+    display: flex
+    flex-direction: row
+    align-items: center
+.logo
+  flex: 4 80px
+  &__title
+    font-family: 'Merriweather Sans', sans-serif
+    font-weight: 900
+    font-size: 36px
+    margin: 0
+    padding: 0
+    &--lean
+      font-weight: 100
+  &__sub-title
+    font-family: 'Merriweather', serif
+    padding: 0
+    margin: 0
+.search
+  flex: 8 80px
+.tab-nav
+  display: none
+  &__container
+    display: flex
+    margin: 0
+    list-style-type: none
+    padding: 0
+  &__item
+    flex: 1
+    display: flex
+  &__button
+    width: 100%
+    border: none
+
+@media all and (min-width: 300px) and (max-width: 800px)
+  .header
+    &__main
+      flex-direction: column
+  .tab-nav
+    display: block
+  .search
+    flex: 1 100px
+    border-left: 0px
+  .logo
+    flex: 1 100px
