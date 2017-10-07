@@ -5,16 +5,17 @@
   "dependencies": {
     "lodash": "^4.17.4",
     "moment": "^2.18.1",
+    "node-sass-chokidar": "*",
+    "npm-run-all": "*",
     "react": "^16.0.0",
+    "react-autosuggest": "^9.3.2",
     "react-dom": "^16.0.0",
+    "react-isolated-scroll": "^0.1.1",
     "react-redux": "^5.0.6",
     "react-scripts": "1.0.14",
     "redux": "^3.7.2",
     "redux-devtools-extension": "*",
-    "redux-thunk": "^2.2.0",
-    "node-sass-chokidar": "*",
-    "react-autosuggest": "^9.3.2",
-    "npm-run-all": "*"
+    "redux-thunk": "^2.2.0"
   },
   "scripts": {
     "build-css": "node-sass-chokidar src/ -o src/",

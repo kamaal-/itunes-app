@@ -1,5 +1,6 @@
 import React from 'react'
 import './Header.css'
+import Search from '../containers/Search'
 
 const Header = props => {
     return(
@@ -11,9 +12,8 @@ const Header = props => {
                     </h1>
                     <h4 className="logo__sub-title">Itunes Affiliate App</h4>
                 </section>
-                <section className="search">
-                    Search
-                </section>
+                <Search onChange={() => {}}/>
+
             </div>
             <div className="header__nav">
                 <nav className="tab-nav">

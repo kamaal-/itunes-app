@@ -7,7 +7,7 @@ import {
     ITUNES_FETCH_STARTED,
     ITUNES_FETCH_SUCCESS
 } from '../action-types'
-
+import {uniqBy} from 'lodash'
 import Album from '../../models/Album' // album model
 import Suggestion from '../../models/Artist' // importing artist as suggestion
 

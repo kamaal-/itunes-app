@@ -8,13 +8,10 @@ import { composeWithDevTools } from 'redux-devtools-extension' // chrome redux d
 import reducer from './services/reducers'
 import registerServiceWorker from './registerServiceWorker'
 
-
 /*
  * Creating redux store from reducer returned state and composing with redux thunk for async actions
  */
 const store = createStore(reducer, composeWithDevTools(applyMiddleware(thunk)))
-
-
 
 ReactDOM.render(
     <Provider store={store}>
