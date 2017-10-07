@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css?family=Merriweather+Sans:300,400,700,800|Merriweather:300,400,700,900");
+body, html, p, span, div, section {
+  font-family: 'Merriweather', serif;
+  color: #666666;
+  font-size: 12px; }
+
+.app {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center; }
+  .app__wrap {
+    width: 1200px;
+    margin: 0 10px;
+    display: flex;
+    max-width: 1200px;
+    flex-direction: column; }
+
+.content {
+  display: flex;
+  flex-direction: row; }

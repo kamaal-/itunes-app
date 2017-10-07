@@ -1,0 +1,91 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  min-height: 100px;
+  border-bottom: 1px solid #EBEBEB; }
+  .header__top {
+    display: flex;
+    flex: 1; }
+  .header__nav {
+    width: 100%; }
+  .header__main {
+    display: flex;
+    flex-direction: column; }
+
+.logo {
+  flex: 4 100px;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: column; }
+  .logo__title {
+    font-family: 'Merriweather Sans', sans-serif;
+    font-weight: 900;
+    font-size: 36px;
+    margin: 0;
+    padding: 0;
+    text-align: right; }
+    .logo__title--lean {
+      font-weight: 100; }
+  .logo__sub-title {
+    font-family: 'Merriweather', serif;
+    padding: 0;
+    margin: 0;
+    color: #999999;
+    text-align: right; }
+
+.search {
+  display: flex;
+  flex: 8 100px;
+  margin-left: 10px; }
+
+.tab-nav {
+  display: none; }
+  .tab-nav__container {
+    display: flex;
+    margin: 0;
+    list-style-type: none;
+    padding: 0; }
+  .tab-nav__item {
+    flex: 1;
+    display: flex;
+    position: relative; }
+    .tab-nav__item--active > .tab-nav__button {
+      background: #f5f5f5; }
+  .tab-nav__button {
+    width: 100%;
+    border: none;
+    background: white;
+    height: 40px;
+    cursor: pointer; }
+    .tab-nav__button:focus {
+      outline: none; }
+    .tab-nav__button:hover {
+      background: #f5f5f5; }
+  .tab-nav--counts {
+    position: absolute;
+    right: 10px;
+    top: -10px;
+    width: 20px;
+    text-align: center;
+    height: 20px;
+    display: block;
+    background: black;
+    line-height: 20px;
+    border-radius: 100%;
+    color: white; }
+
+@media all and (min-width: 300px) and (max-width: 800px) {
+  .header__main, .header__top {
+    flex-direction: column;
+    width: 100%; }
+  .header__main {
+    align-items: center; }
+  .tab-nav {
+    display: block; }
+  .search {
+    flex: 1 70px;
+    border-left: 0px;
+    width: 100%;
+    margin: 0; }
+  .logo {
+    flex: 1 100px; } }
