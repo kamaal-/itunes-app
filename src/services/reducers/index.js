@@ -6,6 +6,16 @@
  * Reducer will always create new immutable state from existing state, states are immutable.
  */
 
-export default (state = {}) => {
+/*
+ * Initial state of our application
+ * no albums
+ * no favorites yet
+ */
+const initialState = {
+    albums: [],
+    favoriteAlbums: []
+}
+
+export default (state = initialState) => {
     return state
 }
