@@ -108,7 +108,6 @@ export const favoriteArtistFilter = artist => {
  * @returns pure redux object
  * */
 export const mobileTabClicked = selectedTab => {
-
     return (dispatch, getState) => {
         dispatch({type: MOBILE_TAB_CHANGED, selectedTab})
     }
