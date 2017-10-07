@@ -121,7 +121,7 @@ class Search extends Component {
 const mapStateToProps = (state) => {
     return {
         searchText: state.searchText,
-        suggestions: state.suggestions
+        suggestions: state.suggestions // suggestions are collected from each fetch result
     }
 }
 

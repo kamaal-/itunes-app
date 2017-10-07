@@ -5,11 +5,28 @@
 import {
     SEARCH_TEXT_UPDATED,
     ITUNES_FETCH_STARTED,
-    ITUNES_FETCH_SUCCESS
+    ITUNES_FETCH_SUCCESS,
+    FAVORITE_ALBUM_ADDED,
+    FAVORITE_ARTIST_FILTERED
 } from '../action-types'
 import {uniqBy} from 'lodash'
 import Album from '../../models/Album' // album model
 import Suggestion from '../../models/Artist' // importing artist as suggestion
+
+/*
+* Add or remove favorite album from favorite collection by checking current favorite collection
+* @param {array} _favorite collection of Album instances from current state
+* @album {Album} album instance of Album from triggered album
+* @returns {array} of Album instances
+* */
+const _togleFavorite = (_favorite, album) => {
+    let favorite = _favorite
+    if(favorite.find(_album => _album.id === album.id)){
+        return favorite.filter(_album => _album.id !== album.id)
+    }
+    favorite.push(album)
+    return favorite
+}
 
 /*
  * Fetch albums using browsers default fetch api
@@ -34,16 +51,15 @@ const _justFetch = (artist, cb) => {
  */
 export const doSearch = (artist = 'michael') => {
     return (dispatch, getState) => {
-        let { suggestions } = getState()
+        let { suggestions } = getState() // getting current suggestions
         dispatch({type: ITUNES_FETCH_STARTED})
         _justFetch(artist, (albums, _suggestions) => {
-            suggestions = suggestions.concat(_suggestions)
-            suggestions = uniqBy(suggestions, 'name')
+            suggestions = suggestions.concat(_suggestions) // combining old suggestions and new ones from each fetch
+            suggestions = uniqBy(suggestions, 'name') // then removing duplicate artist from suggestions.
             dispatch({ type: ITUNES_FETCH_SUCCESS, albums, suggestions })
         })
     }
 }
-
 
 /*
  * Redux action to call fetch artist
@@ -58,5 +74,29 @@ export const searchTextUpdated = value => {
         }else{
             dispatch({type: ITUNES_FETCH_STARTED, searchText: value})
         }
+    }
+}
+
+/*
+* Redux action call from album favorite click
+* @album {Album} album instance of Album from triggered album
+* @returns pure redux object
+* */
+export const addRemoveFavorite = album => {
+    return (dispatch, getState) => {
+        let { favoriteAlbums } = getState()
+        const _favorite = _togleFavorite(favoriteAlbums, album)
+        dispatch({type: FAVORITE_ALBUM_ADDED, favoriteAlbums: _favorite})
+    }
+}
+
+/*
+ *
+ *
+ */
+export const favoriteArtistFilter = artist => {
+    console.log(artist)
+    return (dispatch, getState) => {
+        dispatch({type: FAVORITE_ARTIST_FILTERED, favoriteArtists: artist})
     }
 }

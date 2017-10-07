@@ -4,7 +4,9 @@
 import {
     SEARCH_TEXT_UPDATED,
     ITUNES_FETCH_STARTED,
-    ITUNES_FETCH_SUCCESS
+    ITUNES_FETCH_SUCCESS,
+    FAVORITE_ALBUM_ADDED,
+    FAVORITE_ARTIST_FILTERED
 } from '../action-types'
 /*
  * Reducer will always create new immutable state from existing state, states are immutable.
@@ -38,6 +40,10 @@ export default (state = initialState, action: {}) => {
             return {...state, albums: action.albums, suggestions: action.suggestions}
         case SEARCH_TEXT_UPDATED:
             return {...state, searchText: action.searchText}
+        case FAVORITE_ALBUM_ADDED:
+            return {...state, favoriteAlbums: action.favoriteAlbums,  favoriteText: Math.random()}
+        case FAVORITE_ARTIST_FILTERED:
+            return {...state, favoriteArtists: action.favoriteArtists, favoriteText: Math.random()}
         default:
             return {...state}
     }
