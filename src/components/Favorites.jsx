@@ -22,19 +22,21 @@ class Favorites extends Component {
     }
 
     render(){
-        const {favorite, favoriteArtists, favoriteArtistFilter} = this.props
+        const {favorite, favoriteArtists, favoriteArtistFilter, selectedTab} = this.props
             , artists = getFavoriteArtists(favorite).map(a => {return {value: a.id, label: a.name}})
-
+            , isFavorite = artists.length ? true : false
+            , active = selectedTab === 0 ? 'active' : ''
         return (
-            <section className="favorites">
+            <section className={`favorites ${active}`}>
                 <h3 className="favorites__title">FAVORITE ALBUMS</h3>
-                <Select
+                {isFavorite && <Select
                     name="form-field-name"
                     value={favoriteArtists}
+                    placeholder="Filter by artist"
                     options={artists}
                     multi={true}
                     onChange={(e) => {const values = e.map(f => f.value); favoriteArtistFilter(values)}}
-                />
+                /> }
                 <div className="favorite__container iso">
                     {favorite.length ? favorite
                         .filter(album => {
@@ -53,6 +55,7 @@ class Favorites extends Component {
 
 const mapStateToProps = (state) => {
     return {
+        selectedTab: state.selectedTab,
         favorite: state.favoriteAlbums,
         favoriteArtists: state.favoriteArtists,
         favoriteText: state.favoriteText // random hash text to keep up to date

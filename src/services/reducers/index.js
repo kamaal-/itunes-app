@@ -6,7 +6,8 @@ import {
     ITUNES_FETCH_STARTED,
     ITUNES_FETCH_SUCCESS,
     FAVORITE_ALBUM_ADDED,
-    FAVORITE_ARTIST_FILTERED
+    FAVORITE_ARTIST_FILTERED,
+    MOBILE_TAB_CHANGED
 } from '../action-types'
 /*
  * Reducer will always create new immutable state from existing state, states are immutable.
@@ -23,7 +24,8 @@ const initialState = {
     searchText: '',
     suggestions: [],
     favoriteText: '', // will never be used as any data just to prevent state from immutable update for array shapes
-    favoriteArtists: []
+    favoriteArtists: [],
+    selectedTab: 1 // for mobile layout ill create tab layout for search and favorite
 }
 
 /*
@@ -44,6 +46,8 @@ export default (state = initialState, action: {}) => {
             return {...state, favoriteAlbums: action.favoriteAlbums,  favoriteText: Math.random()}
         case FAVORITE_ARTIST_FILTERED:
             return {...state, favoriteArtists: action.favoriteArtists, favoriteText: Math.random()}
+        case MOBILE_TAB_CHANGED:
+            return {...state, selectedTab: action.selectedTab, favoriteText: Math.random()}
         default:
             return {...state}
     }

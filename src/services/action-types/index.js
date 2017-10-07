@@ -18,11 +18,15 @@ export const ITUNES_FETCH_FAILED = 'ITUNES_FETCH_FAILED'  // dispatch if search 
  * Favorite albums
  * Once user clicked favorite button 'FAVORITE_ALBUM_ADD_REMOVE_STARTED' will be dispatch and action will toggle favorite item
  */
-export const FAVORITE_ALBUM_ADD_REMOVE_STARTED =  'FAVORITE_ALBUM_ADD_REMOVE_STARTED' // dispatch just after favorite button has pressed
 export const FAVORITE_ALBUM_ADDED =  'FAVORITE_ALBUM_ADDED' // will dispatch if favorite album added
-export const FAVORITE_ALBUM_REMOVED =  'FAVORITE_ALBUM_REMOVED' // will dispatch if favorite album removed
+
 
 /*
  * Favorite artist filtering
  * */
 export const FAVORITE_ARTIST_FILTERED =  'FAVORITE_ARTIST_FILTERED' // will dispatch if favorite artist filtered
+
+/*
+ * Mobile tab clicked
+ */
+export const MOBILE_TAB_CHANGED =  'MOBILE_TAB_CHANGED' // will dispatch after tab update

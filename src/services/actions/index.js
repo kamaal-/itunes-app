@@ -7,7 +7,8 @@ import {
     ITUNES_FETCH_STARTED,
     ITUNES_FETCH_SUCCESS,
     FAVORITE_ALBUM_ADDED,
-    FAVORITE_ARTIST_FILTERED
+    FAVORITE_ARTIST_FILTERED,
+    MOBILE_TAB_CHANGED
 } from '../action-types'
 import {uniqBy} from 'lodash'
 import Album from '../../models/Album' // album model
@@ -54,7 +55,7 @@ export const doSearch = (artist = 'michael') => {
         let { suggestions } = getState() // getting current suggestions
         dispatch({type: ITUNES_FETCH_STARTED})
         _justFetch(artist, (albums, _suggestions) => {
-            suggestions = suggestions.concat(_suggestions) // combining old suggestions and new ones from each fetch
+            suggestions = suggestions.length < 200 ? suggestions.concat(_suggestions) : [] // combining old suggestions and new ones from each fetch, max limit only 200 items(for performance)
             suggestions = uniqBy(suggestions, 'name') // then removing duplicate artist from suggestions.
             dispatch({ type: ITUNES_FETCH_SUCCESS, albums, suggestions })
         })
@@ -91,12 +92,24 @@ export const addRemoveFavorite = album => {
 }
 
 /*
- *
- *
- */
+ * Redux action call from favorite artist filter
+ * @artist {array} of artists id from select component
+ * @returns pure redux object
+ * */
 export const favoriteArtistFilter = artist => {
-    console.log(artist)
     return (dispatch, getState) => {
         dispatch({type: FAVORITE_ARTIST_FILTERED, favoriteArtists: artist})
+    }
+}
+
+/*
+ * Redux action call from mobile tab button
+ * @selectedTab {number} index of clicked button
+ * @returns pure redux object
+ * */
+export const mobileTabClicked = selectedTab => {
+
+    return (dispatch, getState) => {
+        dispatch({type: MOBILE_TAB_CHANGED, selectedTab})
     }
 }
