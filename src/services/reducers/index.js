@@ -1,7 +1,11 @@
 /**
  * Created by kamaal on 10/7/17.
  */
-
+import {
+    SEARCH_TEXT_UPDATED,
+    ITUNES_FETCH_STARTED,
+    ITUNES_FETCH_SUCCESS
+} from '../action-types'
 /*
  * Reducer will always create new immutable state from existing state, states are immutable.
  */
@@ -13,9 +17,28 @@
  */
 const initialState = {
     albums: [],
-    favoriteAlbums: []
+    favoriteAlbums: [],
+    searchText: '',
+    suggestions: [],
+    favoriteText: '', // will never be used as any data just to prevent state from immutable update for array shapes
+    favoriteArtists: []
 }
 
-export default (state = initialState) => {
-    return state
+/*
+ * Main reducer function due to the size of our app size we can manage with single function.
+ * @param {object} state application state
+ * @param {object} action current action type from action
+ * @returns {object}
+ */
+export default (state = initialState, action: {}) => {
+    switch (action.type) {
+        case ITUNES_FETCH_STARTED:
+            return {...state, albums:[]}
+        case ITUNES_FETCH_SUCCESS:
+            return {...state, albums: action.albums, suggestions: action.suggestions}
+        case SEARCH_TEXT_UPDATED:
+            return {...state, searchText: action.searchText}
+        default:
+            return {...state}
+    }
 }
