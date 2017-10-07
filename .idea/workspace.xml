@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="774141ef-4460-4f08-b3fc-75e50ec608fe" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/Album.css" afterPath="$PROJECT_DIR$/src/containers/Album.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/Album.sass" afterPath="$PROJECT_DIR$/src/containers/Album.sass" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/services/actions/index.js" afterPath="$PROJECT_DIR$/src/services/actions/index.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -52,20 +52,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Favorites.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Favorites.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="30" column="69" lean-forward="true" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="69" />
-              <folding>
-                <element signature="e#0#38#0" expanded="true" />
-                <marker date="1507394215978" expanded="true" signature="1083:1325" ph="..." />
-                <marker date="1507394215978" expanded="true" signature="1475:1907" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Favorites.sass" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Favorites.sass">
           <provider selected="true" editor-type-id="text-editor">
@@ -89,6 +75,18 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/services/actions/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1740">
+              <caret line="89" column="46" lean-forward="false" selection-start-line="89" selection-start-column="46" selection-end-line="89" selection-end-column="46" />
+              <folding>
+                <element signature="e#42#231#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="SearchResult.sass" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/SearchResult.sass">
           <provider selected="true" editor-type-id="text-editor">
@@ -99,11 +97,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Album.sass" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Album.sass" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/containers/Album.sass">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="6" lean-forward="false" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
+            <state relative-caret-position="456">
+              <caret line="23" column="17" lean-forward="false" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -160,7 +158,6 @@
         <option value="$PROJECT_DIR$/src/containers/Album.jsx" />
         <option value="$PROJECT_DIR$/src/services/action-types/index.js" />
         <option value="$PROJECT_DIR$/src/services/reducers/index.js" />
-        <option value="$PROJECT_DIR$/src/services/actions/index.js" />
         <option value="$PROJECT_DIR$/src/components/Favorites.jsx" />
         <option value="$PROJECT_DIR$/src/App.sass" />
         <option value="$PROJECT_DIR$/src/components/Favorites.sass" />
@@ -171,6 +168,7 @@
         <option value="$PROJECT_DIR$/src/containers/Search.sass" />
         <option value="$PROJECT_DIR$/src/components/Header.sass" />
         <option value="$PROJECT_DIR$/src/containers/Album.sass" />
+        <option value="$PROJECT_DIR$/src/services/actions/index.js" />
       </list>
     </option>
   </component>
@@ -231,6 +229,46 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="itunes-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="itunes-app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="services" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="itunes-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="itunes-app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="services" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="actions" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -367,7 +405,7 @@
       <option name="presentableId" value="Default" />
       <updated>1507379610262</updated>
       <workItem from="1507379611563" duration="561000" />
-      <workItem from="1507381088870" duration="15889000" />
+      <workItem from="1507381088870" duration="16023000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1507379807903</created>
@@ -502,11 +540,18 @@
       <option name="project" value="LOCAL" />
       <updated>1507397313185</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Responsiveness done.">
+      <created>1507397536017</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1507397536017</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16450000" />
+    <option name="totallyTimeSpent" value="16584000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2560" y="23" width="2560" height="1417" extended-state="6" />
@@ -717,16 +762,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/actions/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="110" column="0" lean-forward="false" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
-          <folding>
-            <element signature="e#42#231#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.sass">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -793,17 +828,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/SearchResult.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="42" lean-forward="false" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-            <marker date="1507396218947" expanded="true" signature="344:369" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Header.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -832,9 +856,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/containers/Album.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="6" lean-forward="false" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
+        <state relative-caret-position="456">
+          <caret line="23" column="17" lean-forward="false" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/SearchResult.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" column="42" lean-forward="false" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+            <marker date="1507396218947" expanded="true" signature="344:369" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/actions/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1740">
+          <caret line="89" column="46" lean-forward="false" selection-start-line="89" selection-start-column="46" selection-end-line="89" selection-end-column="46" />
+          <folding>
+            <element signature="e#42#231#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
